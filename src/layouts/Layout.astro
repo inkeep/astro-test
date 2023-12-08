@@ -4,6 +4,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import InkeepModal from '../components/InkeepModal';
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <!doctype html>
@@ -14,9 +16,16 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<ViewTransitions />
 		<title>{title}</title>
 	</head>
 	<body>
+		<nav>
+			<a href="/">home</a>
+			<a href="/docs/">docs</a>
+			<a href="/community/">community</a>
+			<InkeepModal client:only />
+		</nav>
 		<slot />
 	</body>
 </html>
@@ -34,7 +43,7 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		background: #ffffff;
 		background-size: 224px;
 	}
 	code {
