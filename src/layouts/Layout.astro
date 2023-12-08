@@ -19,7 +19,9 @@ import { ViewTransitions } from 'astro:transitions';
 		<ViewTransitions />
 		<title>{title}</title>
 	</head>
+	<!-- adding transition:persist to <body> works ok -->
 	<body>
+		<!-- adding transition:persist to <nav> will break the widget -->
 		<nav>
 			<a href="/">home</a>
 			<a href="/docs/">docs</a>
