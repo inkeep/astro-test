@@ -12,7 +12,7 @@
   "dependencies": {
     "@astrojs/check": "^0.3.1",
     "@astrojs/react": "^3.0.7",
-    "@inkeep/widgets": "^0.2.238",
+    "@inkeep/widgets": "^0.2.255",
     "astro": "^4.0.3",
     "typescript": "^5.3.3"
   }
